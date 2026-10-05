@@ -56,6 +56,7 @@ h4, .h4 { font-size: 1.15rem; }
 .lede { font-size: clamp(1.05rem, 0.4vw + 0.95rem, 1.2rem); color: var(--color-muted); max-width: 38em; }
 .section--walnut .lede { color: var(--color-cream); opacity: 0.85; }
 .muted { color: var(--color-muted); }
+.accent-script { font-family: var(--font-heading); font-style: italic; font-size: clamp(1.2rem, 0.8vw + 1rem, 1.6rem); line-height: 1.35; color: var(--color-accent); margin: 0.75rem 0 0; }
 .rte > * + * { margin-top: 0.9em; }
 .rte a { color: var(--color-accent); }
 
@@ -207,6 +208,7 @@ h4, .h4 { font-size: 1.15rem; }
 .hero__content { position: relative; z-index: 1; padding-block: 6rem; }
 .hero__text { max-width: 34rem; }
 .hero h1 { color: #fff; margin-bottom: 1.25rem; }
+.hero__tagline { color: var(--color-cream); margin: -0.5rem 0 1.5rem; }
 .hero__lede { font-size: clamp(1.05rem, 0.5vw + 0.95rem, 1.25rem); color: var(--color-cream); opacity: 0.92; margin-bottom: 2.25rem; max-width: 30em; }
 .hero__facts { display: flex; flex-wrap: wrap; gap: 0.6rem 1.75rem; margin: 2.5rem 0 0; padding: 0; list-style: none; font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase; opacity: 0.8; }
 .hero__facts li { display: flex; align-items: center; gap: 0.65rem; }
@@ -227,6 +229,30 @@ h4, .h4 { font-size: 1.15rem; }
 .feature h3 { font-size: 1.45rem; margin-bottom: 0.6rem; }
 .feature p { color: var(--color-muted); max-width: 22rem; margin-inline: auto; }
 @media (max-width: 749px) { .features { grid-template-columns: 1fr; gap: 2.75rem; } }
+
+/* Scent collection */
+.scent-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: clamp(0.5rem, 1vw, 0.9rem); list-style: none; padding: 0; margin: 0; }
+.scent-card { position: relative; display: flex; flex-direction: column; background: var(--scent-color, var(--color-walnut)); color: #F6EFE3; border-radius: var(--radius); overflow: hidden; text-align: center; }
+.scent-card--dark-text { color: var(--color-walnut-deep); }
+.scent-card__media { aspect-ratio: 167 / 229; background: var(--color-walnut-deep); }
+.scent-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.scent-card:hover .scent-card__media img { transform: scale(1.04); }
+.scent-card__body { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.45rem; padding: 1.25rem 0.75rem 1.5rem; }
+.scent-card__number { font-family: var(--font-body); font-size: 0.66rem; letter-spacing: 0.3em; opacity: 0.85; }
+.scent-card__number sup { font-size: 0.8em; vertical-align: 0.35em; text-decoration: underline; text-underline-offset: 0.15em; }
+.scent-card__name { font-size: clamp(0.95rem, 0.5vw + 0.75rem, 1.15rem); letter-spacing: 0.16em; text-transform: uppercase; margin: 0; line-height: 1.25; }
+.scent-card__name a { text-decoration: none; }
+.scent-card__name a::after { content: ""; position: absolute; inset: 0; }
+.scent-card:focus-within { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+.scent-card__name a:focus-visible { outline: none; }
+.scent-card__notes { font-size: 0.8rem; line-height: 1.45; margin: 0; opacity: 0.92; }
+.scent-card__tagline { font-family: var(--font-heading); font-style: italic; font-size: 0.92rem; line-height: 1.35; margin: auto 0 0; padding-top: 0.85rem; border-top: 1px solid currentColor; border-top-color: color-mix(in srgb, currentColor 40%, transparent); width: 70%; }
+@media (max-width: 1099px) { .scent-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 559px) {
+  .scent-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .scent-card__body { padding: 1rem 0.6rem 1.2rem; }
+  .scent-card__tagline { width: 85%; }
+}
 
 /* Product grid + cards */
 .product-grid { display: grid; grid-template-columns: repeat(var(--columns, 3), minmax(0, 1fr)); gap: clamp(1.25rem, 2.5vw, 2.25rem); list-style: none; padding: 0; margin: 0; }
@@ -255,6 +281,7 @@ h4, .h4 { font-size: 1.15rem; }
 .price__sale { color: var(--color-sale); }
 .price__compare { color: var(--color-muted); text-decoration: line-through; font-size: 0.85em; }
 .price__unavailable { color: var(--color-muted); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; }
+.price__pending { font-family: var(--font-heading); font-style: italic; color: var(--color-muted); }
 
 /* Steps */
 .steps { display: grid; grid-template-columns: repeat(var(--columns, 3), minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 3rem); list-style: none; padding: 0; margin: 0; counter-reset: step; }
@@ -342,6 +369,8 @@ h4, .h4 { font-size: 1.15rem; }
 .field__input:focus { outline: none; border-color: var(--color-walnut); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 25%, transparent); }
 .field__input[aria-invalid="true"], .field__input:user-invalid { border-color: var(--color-sale); }
 textarea.field__input { min-height: 9rem; resize: vertical; }
+.field__input--file { padding: 0.6rem; font-size: 0.88rem; }
+.field__input--file::file-selector-button { margin-right: 0.9rem; padding: 0.5rem 1rem; border: 1px solid var(--color-walnut); border-radius: var(--radius); background: var(--color-surface); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; }
 .field__error { color: var(--color-sale); font-size: 0.85rem; }
 .field__error:empty { display: none; }
 .section--walnut .field__error, .password-page .field__error { color: #F4C3AA; }

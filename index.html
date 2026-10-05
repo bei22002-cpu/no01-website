@@ -20,6 +20,7 @@
   
   
   
+  
 
   :root {
     --font-heading: "Playfair Display", Georgia, serif;
@@ -49,6 +50,8 @@
       window.themeStrings = {
         addToCart: "Add to cart",
         soldOut: "Sold out",
+        comingSoon: "Coming soon",
+        priceComingSoon: "Price coming soon",
         unavailable: "Unavailable",
         added: "Added to your cart",
         viewCart: "View cart",
@@ -63,7 +66,7 @@
     <script src="/no01-website/assets/theme.js" defer="defer"></script>
     <script>document.documentElement.classList.replace('no-js', 'js');</script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Montserrat:wght@300;400;600&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;600&display=swap">
   <script src="/no01-website/assets/demo.js"></script></head>
 
   <body class="template-index">
@@ -146,8 +149,96 @@
   ></div>
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="page-width hero__content">
-    <div class="hero__text"><p class="eyebrow">Solid alder · Magnetic visor clip</p><h1 id="HeroHeading-template--index__hero">Designed for your escape.</h1><div class="hero__lede"><p>A scented disc of solid alderwood that snaps onto a magnetic visor clip. Swap scents in seconds, with refills sealed until you open them.</p></div><div class="button-row"><a class="button button--light" href="/no01-website/collections/all" data-track="cta_click" data-track-label="hero_primary">Shop the Starter Kit</a><a class="button button--outline-light" href="/no01-website/pages/bulk-orders" data-track="cta_click" data-track-label="hero_secondary">Custom logo orders</a></div><ul class="hero__facts"><li>Made in Rexburg, Idaho</li><li>Refills sealed in foil</li><li>Logo orders from 25</li></ul></div>
+    <div class="hero__text"><p class="eyebrow">Solid alder · Magnetic visor clip</p><h1 id="HeroHeading-template--index__hero">Designed for your escape.</h1><p class="accent-script hero__tagline">A scent for wherever life takes you.</p><div class="hero__lede"><p>A scented disc of solid alderwood that snaps onto a magnetic visor clip. Swap scents in seconds, with refills sealed until you open them.</p></div><div class="button-row"><a class="button button--light" href="/no01-website/collections/all" data-track="cta_click" data-track-label="hero_primary">Shop the Starter Kit</a><a class="button button--outline-light" href="/no01-website/pages/bulk-orders" data-track="cta_click" data-track-label="hero_secondary">Custom logo orders</a></div><ul class="hero__facts"><li>Made in Rexburg, Idaho</li><li>Refills sealed in foil</li><li>Logo orders from 25</li></ul></div>
   </div>
+</section>
+
+
+<section class="section scent-collection" id="scents" aria-labelledby="ScentsHeading-template--index__scents">
+  <div class="page-width">
+    <header class="section__header section__header--center reveal"><p class="eyebrow">The collection</p><h2 id="ScentsHeading-template--index__scents">Six destinations. Six scents.</h2><div class="lede"><p>A quiet kind of luxury, inspired by mountains, back roads, small towns and quiet nights.</p></div></header>
+
+    <ul class="scent-grid" role="list"><li class="scent-card reveal" style="--scent-color: #3E4A2E;" >
+          <div class="scent-card__media"><img
+    src="/no01-website/assets/scent-no-service.webp"
+    alt="A forest lake below a snowy peak, with the Nº01 disc on its visor clip"
+    width="167"
+    height="229"
+    loading="lazy"
+    fetchpriority="auto"
+    decoding="async"
+  ></div>
+          <div class="scent-card__body">
+            <span class="scent-card__number" aria-hidden="true">N<sup>o</sup>01</span>
+            <h3 class="scent-card__name"><a href="/no01-website/products/starter-kit">No Service</a></h3><p class="scent-card__notes"><span class="visually-hidden">Scent notes: </span>Fir · Moss · Cedar</p><p class="scent-card__tagline">Somewhere you can&#39;t be reached.</p></div>
+        </li><li class="scent-card reveal" style="--scent-color: #8B6422;" >
+          <div class="scent-card__media"><img
+    src="/no01-website/assets/scent-golden-hour.webp"
+    alt="The sun setting over a wildflower meadow, with the Nº01 disc on its visor clip"
+    width="167"
+    height="229"
+    loading="lazy"
+    fetchpriority="auto"
+    decoding="async"
+  ></div>
+          <div class="scent-card__body">
+            <span class="scent-card__number" aria-hidden="true">N<sup>o</sup>02</span>
+            <h3 class="scent-card__name"><a href="/no01-website/products/starter-kit">Golden Hour</a></h3><p class="scent-card__notes"><span class="visually-hidden">Scent notes: </span>Amber · Fig · Vanilla</p><p class="scent-card__tagline">Stay a little longer.</p></div>
+        </li><li class="scent-card reveal" style="--scent-color: #4A6F93;" >
+          <div class="scent-card__media"><img
+    src="/no01-website/assets/scent-teton-after-dark.webp"
+    alt="Jagged mountains at dusk above a pine forest, with the Nº01 disc on its visor clip"
+    width="167"
+    height="229"
+    loading="lazy"
+    fetchpriority="auto"
+    decoding="async"
+  ></div>
+          <div class="scent-card__body">
+            <span class="scent-card__number" aria-hidden="true">N<sup>o</sup>03</span>
+            <h3 class="scent-card__name"><a href="/no01-website/products/starter-kit">Teton After Dark</a></h3><p class="scent-card__notes"><span class="visually-hidden">Scent notes: </span>Pine · Juniper · White Musk</p><p class="scent-card__tagline">Meet you in the mountains.</p></div>
+        </li><li class="scent-card reveal scent-card--dark-text" style="--scent-color: #D9C7A7;" >
+          <div class="scent-card__media"><img
+    src="/no01-website/assets/scent-the-dunes.webp"
+    alt="Rippled desert dunes under a pink evening sky, with the Nº01 disc on its visor clip"
+    width="167"
+    height="229"
+    loading="lazy"
+    fetchpriority="auto"
+    decoding="async"
+  ></div>
+          <div class="scent-card__body">
+            <span class="scent-card__number" aria-hidden="true">N<sup>o</sup>04</span>
+            <h3 class="scent-card__name"><a href="/no01-website/products/starter-kit">The Dunes</a></h3><p class="scent-card__notes"><span class="visually-hidden">Scent notes: </span>Sandalwood · Amber · Warm Musk</p><p class="scent-card__tagline">Chasing the last light.</p></div>
+        </li><li class="scent-card reveal" style="--scent-color: #6E2B25;" >
+          <div class="scent-card__media"><img
+    src="/no01-website/assets/scent-room-01.webp"
+    alt="A roadside motel with a red neon sign and palm trees at dusk, with the Nº01 disc on its visor clip"
+    width="167"
+    height="229"
+    loading="lazy"
+    fetchpriority="auto"
+    decoding="async"
+  ></div>
+          <div class="scent-card__body">
+            <span class="scent-card__number" aria-hidden="true">N<sup>o</sup>05</span>
+            <h3 class="scent-card__name"><a href="/no01-website/products/starter-kit">Room 01</a></h3><p class="scent-card__notes"><span class="visually-hidden">Scent notes: </span>Santal · Linen · Soft Amber</p><p class="scent-card__tagline">Do not disturb.</p></div>
+        </li><li class="scent-card reveal" style="--scent-color: #5A6631;" >
+          <div class="scent-card__media"><img
+    src="/no01-website/assets/scent-the-orchard.webp"
+    alt="Red apples on the branch in an autumn orchard, with the Nº01 disc on its visor clip"
+    width="167"
+    height="229"
+    loading="lazy"
+    fetchpriority="auto"
+    decoding="async"
+  ></div>
+          <div class="scent-card__body">
+            <span class="scent-card__number" aria-hidden="true">N<sup>o</sup>06</span>
+            <h3 class="scent-card__name"><a href="/no01-website/products/starter-kit">The Orchard</a></h3><p class="scent-card__notes"><span class="visually-hidden">Scent notes: </span>Crisp Apple · Fallen Leaves · Cedarwood</p><p class="scent-card__tagline">Autumn, somewhere familiar.</p></div>
+        </li></ul><div class="section__footer">
+        <a class="button" href="/no01-website/products/starter-kit" data-track="cta_click" data-track-label="scent_collection">Choose your scent</a>
+      </div></div>
 </section>
 
 
@@ -173,8 +264,8 @@
 
 <section class="section section--surface" aria-labelledby="ProductsHeading-template--index__products">
     <div class="page-width">
-      <header class="section__header section__header--center reveal"><p class="eyebrow">The collection</p><h2 id="ProductsHeading-template--index__products">Start with the kit. Refill when you like.</h2></header><ul class="product-grid" style="--columns: 3;" role="list"><li class="reveal"><article class="card">
-  <div class="card__media" style="--card-ratio: 1;"><img src="/no01-website/assets/hero-visor.webp" alt="Disc on a visor clip" class="card__img" loading="lazy" sizes="(min-width: 990px) 33vw, (min-width: 560px) 50vw, 100vw"><img src="/no01-website/assets/packing.webp" alt="" class="card__img card__img--secondary" loading="lazy" sizes="(min-width: 990px) 33vw, (min-width: 560px) 50vw, 100vw"></div>
+      <header class="section__header section__header--center reveal"><p class="eyebrow">Shop</p><h2 id="ProductsHeading-template--index__products">Start with the kit. Refill when you like.</h2></header><ul class="product-grid" style="--columns: 4;" role="list"><li class="reveal"><article class="card">
+  <div class="card__media" style="--card-ratio: 1;"><img src="/no01-website/assets/hero-visor.webp" alt="Disc on a visor clip" class="card__img" loading="lazy" sizes="(min-width: 990px) 33vw, (min-width: 560px) 50vw, 100vw"><img src="/no01-website/assets/disc-detail.webp" alt="" class="card__img card__img--secondary" loading="lazy" sizes="(min-width: 990px) 33vw, (min-width: 560px) 50vw, 100vw"></div>
   <div class="card__body">
     <h3 class="card__title"><a href="/no01-website/products/starter-kit">Starter Kit</a></h3><p class="card__desc">One scented 2.75 in alder disc and the magnetic metal visor clip, in a kraft box....</p><div class="price" data-price><span>$12.00</span></div>
 
@@ -205,8 +296,31 @@
 
   </div>
 </article>
+</li><li class="reveal"><article class="card">
+  <div class="card__media" style="--card-ratio: 1;"><img src="/no01-website/assets/escape-set-box.webp" alt="The Escape Set in its open box" class="card__img" loading="lazy" sizes="(min-width: 990px) 33vw, (min-width: 560px) 50vw, 100vw"><img src="/no01-website/assets/escape-set-visor.webp" alt="" class="card__img card__img--secondary" loading="lazy" sizes="(min-width: 990px) 33vw, (min-width: 560px) 50vw, 100vw"></div>
+  <div class="card__body">
+    <h3 class="card__title"><a href="/no01-website/products/escape-set">The Escape Set</a></h3><p class="card__desc">A car fragrance, a place to hold what matters, and a little reminder to take the...</p><div class="price" data-price><span class="price__pending">Price coming soon</span></div>
+
+  </div>
+</article>
 </li></ul></div>
   </section>
+<section class="section" aria-labelledby="SplitHeading-template--index__escape_set">
+  <div class="page-width split">
+    <div class="split__media reveal"><img
+    src="/no01-website/assets/escape-set-box.webp"
+    alt="The Nº01 Escape Set in an open green box: an alder disc with a sprig engraving, a scent bottle and a green ceramic photo frame"
+    width="510"
+    height="417"
+    loading="lazy"
+    fetchpriority="auto"
+    decoding="async"
+  ></div>
+    <div class="split__text reveal"><p class="eyebrow">The Escape Set</p><h2 class="h2" id="SplitHeading-template--index__escape_set">A place to hold what matters.</h2><div class="lede rte"><p>A car fragrance, a place to hold what matters, and a little reminder to take the long way.</p></div><ul class="split__list" role="list"><li ><span>Solid alder visor magnet on the magnetic clip</span></li><li ><span>A bottle of scent refill</span></li><li ><span>A ceramic photo frame in your scent's color</span></li><li ><span>A curated image for your scent, or <strong>upload your own photo</strong></span></li></ul><div class="button-row"><a class="button" href="/no01-website/products/escape-set" data-track="cta_click" data-track-label="A place to hold what matters.">See the Escape Set</a></div></div>
+  </div>
+</section>
+
+
 <section class="section section--walnut" aria-labelledby="StepsHeading-template--index__steps">
   <div class="page-width">
     <header class="section__header reveal"><p class="eyebrow">How it works</p><h2 id="StepsHeading-template--index__steps">Clip it. Click it. Refill it.</h2></header>

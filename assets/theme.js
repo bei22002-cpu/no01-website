@@ -125,10 +125,14 @@
         return;
       }
       idInput.value = variant.id;
-      submit.disabled = !variant.available;
-      submit.textContent = variant.available ? strings.addToCart : strings.soldOut;
+      const pricePending = variant.price === 0;
+      submit.disabled = !variant.available || pricePending;
+      if (pricePending) submit.textContent = strings.comingSoon;
+      else submit.textContent = variant.available ? strings.addToCart : strings.soldOut;
       if (priceEl) {
-        priceEl.innerHTML = variant.compare_at_price > variant.price
+        priceEl.innerHTML = pricePending
+          ? `<span class="price__pending">${strings.priceComingSoon}</span>`
+          : variant.compare_at_price > variant.price
           ? `<span class="visually-hidden">${strings.salePrice}</span><span class="price__sale">${money(variant.price)}</span> <span class="visually-hidden">${strings.regularPrice}</span><s class="price__compare">${money(variant.compare_at_price)}</s>`
           : `<span>${money(variant.price)}</span>`;
       }
